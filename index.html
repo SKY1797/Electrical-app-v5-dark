@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electrical Supply Application</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-content">
+        <img
+          src="https://ntpc.co.in/themes/ntpc/images/logo.png"
+          alt="NTPC Logo"
+          class="header-logo"
+        />
+        <h1 class="header-title">Solapur Operation Department</h1>
+      </div>
+    </header>
+    <main class="main-container">
+      <!-- Page 1: Unit Selection -->
+      <div id="unitSelectionPage" class="page">
+        <div class="page-content">
+          <div class="card">
+            <div class="card-header">
+              <h1 class="card-title">Electrical Supply Application</h1>
+              <p class="card-description">
+                Select a Unit to search equipment
+              </p>
+            </div>
+
+            <div class="card-content">
+              <div class="unit-selection-page">
+                <button id="unit1Btn" class="unit-btn-large" data-unit="unit1">
+                  <span class="unit-icon">⚡</span>
+                  <span class="unit-text">Unit 1 and Offsite</span>
+                </button>
+                <button id="unit2Btn" class="unit-btn-large" data-unit="unit2">
+                  <span class="unit-icon">⚡</span>
+                  <span class="unit-text">Unit 2</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-divider"></div>
+            <div class="footer-developer">Developed by Akash Kantaria</div>
+          </div>
+        </footer>
+      </div>
+
+      <!-- Page 2: Search and Results -->
+      <div id="searchPage" class="page hidden">
+        <div class="search-page-header">
+          <button id="backBtn" class="back-button">
+            <span>←</span> Back
+          </button>
+          <h2 id="selectedUnitTitle" class="selected-unit-title">
+            Unit 1 and Offsite
+          </h2>
+        </div>
+
+        <div class="search-page-content">
+          <form id="searchForm" class="search-form">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Enter search term..."
+              class="search-input"
+              aria-label="Search query"
+            />
+            <button type="submit" id="searchBtn" class="search-button">
+              <span id="searchIcon" class="search-icon">🔍</span>
+              <span id="loadingIcon" class="loading-icon hidden">⌛</span>
+              <!-- <span class="search-text">Search</span> -->
+            </button>
+          </form>
+        </div>
+
+        <div class="search-page-results">
+          <div id="searchStatus" class="search-status hidden"></div>
+          <div id="searchResults" class="search-results hidden"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

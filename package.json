@@ -1,0 +1,22 @@
+{
+  "name": "electrical-supply-app",
+  "version": "1.0.0",
+  "description": "Electrical Supply Application for NTPC Solapur Operation Department",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve -s . -l 3000",
+    "start": "npm run dev",
+    "build": "echo 'Build complete - static files ready'"
+  },
+  "keywords": [
+    "electrical",
+    "supply",
+    "ntpc",
+    "solapur"
+  ],
+  "author": "Akash Kantaria",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
